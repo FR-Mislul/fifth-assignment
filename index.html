@@ -54,7 +54,7 @@
                 <h1 class="text-6xl font-extrabold font-raleway text-[#FFFFFF]">End-to-End Travel with</h1>
                 <h2 class="text-6xl font-extrabold font-ralewsy text-[#1DD100]">P Paribahan</h2>
                 <p class="w-[691px] font-inter text-lg text-[#FFFFFF]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                <button class="btn border-none w-44 h-auto px-6 py-4 text-xl font-bold text-[#030712] bg-[#1DD100]">Buy Tickets</button>
+                <button onclick="scrollDopDown()" id="bay-ticket" class="btn border-none w-44 h-auto px-6 py-4 text-xl font-bold text-[#030712] bg-[#1DD100]">Buy Tickets</button>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@
       </section>
 
       <!-- Tacket counting section  -->
-      <section id="tickit" class="bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[88px] py-32">
+      <section id="sell-ticket" class="bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[88px] py-32">
         <div>
           <div class="w-[736px] text-center mx-auto space-y-6 mb-12">
             <h1 class="text-4xl font-raleway font-bold text-[#030712]">P.H Paribahan</h1>
@@ -144,7 +144,7 @@
                   </div>
                 </div>
                 <div>
-                  <button class="btn bg-[#1DD10026] text-lg font-medium font-inter text-[#1DD100]"><img src="images/seat-green.png" alt="">40 Seats left</button>
+                  <button class="btn bg-[#1DD10026] text-lg font-medium font-inter text-[#1DD100]"><img src="images/seat-green.png" alt=""><span id="available-sit">8</span> Seats left</button>
                 </div>
               </div>
               <div class="bg-[#F7F8F8] rounded-3xl space-y-6 p-8">
@@ -184,7 +184,7 @@
 
         
       <!-- sit selection section  -->
-      <div class="w-11/12 flex mx-auto bg-[#FFFFFF] p-8 rounded-3xl mt-7">
+      <div id="sit-selection" class="w-11/12 flex mx-auto bg-[#FFFFFF] p-8 rounded-3xl mt-7">
         <div class="w-[676px] pr-8">
           <div>
             <h2 class="text-2xl font-semibold font-raleway text-[#030712]">Select Your Seat</h2>
@@ -209,12 +209,12 @@
               <p class="item font-inter text-lg font-medium">A</p>
               <div class="w-full flex justify-between">
                 <div class="space-x-8">
-                  <button class="item font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A1</button>
-                  <button class="item font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A2</button>
+                  <button id="a1" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A1</button>
+                  <button id="a2" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A2</button>
                 </div>
                 <div class="space-x-8">
-                  <button class="item font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A3</button>
-                  <button class="item font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A4</button>
+                  <button id="a3" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A3</button>
+                  <button id="a4" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A4</button>
                 </div>
               </div>
             </div>
@@ -222,12 +222,12 @@
               <p class="item font-inter text-lg font-medium ">B</p>
               <div class="w-full flex justify-between">
                 <div class="space-x-8">
-                  <button class="item font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B1</button>
-                  <button class="item font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B2</button>
+                  <button id="b1" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B1</button>
+                  <button id="b2" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B2</button>
                 </div>
                 <div class="space-x-8">
-                  <button class="item font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B3</button>
-                  <button class="item font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B4</button>
+                  <button id="b3" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B3</button>
+                  <button id="b4" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B4</button>
                 </div>
               </div>
             </div>
@@ -241,29 +241,29 @@
           <div class="border-b border-dashed border-[#03071233] mt-6"></div>
           <div class="w-[433px] mx-auto p-8 bg-[#F7F8F8] rounded-xl">
             <div class="flex justify-between items-center font-inter font-medium text-base text-[#030712]">
-              <p>Seat</p>
+              <p>Seat <sup id="select-sit" class="text-[#1DD100] font-bold text-lg">0</sup></p>
               <p class="mr-10">Class</p>
               <p>Price</p>
             </div>
             <div class="border-b border-dashed border-[#03071233] my-4"></div>
-            <div class="space-y-4">
-              <div class="flex justify-between items-center font-inter font-normal text-base hidden">
-                <p></p>
+            <div  class="space-y-4">
+              <div id="ticket-1" class="flex justify-between items-center font-inter font-normal text-base hidden">
+                <p id="ticket-no-1"></p>
                 <p class="ml-5">Economoy</p>
                 <p>550</p>
               </div>
-              <div class="flex justify-between items-center font-inter font-normal text-base hidden">
-                <p></p>
+              <div id="ticket-2" class="flex justify-between items-center font-inter font-normal text-base hidden">
+                <p id="ticket-no-2"></p>
                 <p class="ml-5">Economoy</p>
                 <p>550</p>
               </div>
-              <div class="flex justify-between items-center font-inter font-normal text-base hidden">
-                <p></p>
+              <div id="ticket-3" class="flex justify-between items-center font-inter font-normal text-base hidden">
+                <p id="ticket-no-3"></p>
                 <p class="ml-5">Economoy</p>
                 <p>550</p>
               </div>
-              <div class="flex justify-between items-center font-inter font-normal text-base hidden">
-                <p></p>
+              <div id="ticket-4" class="flex justify-between items-center font-inter font-normal text-base hidden">
+                <p id="ticket-no-4"></p>
                 <p class="ml-5">Economoy</p>
                 <p>550</p>
               </div>
