@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header class="w-11/12 mx-auto">
+    <header class="w-11/12 mx-abus-sit
       <!-- navbar section  -->
         <div>
             <nav class="mb-4">
@@ -209,12 +209,12 @@
               <p class="item font-inter text-lg font-medium">A</p>
               <div class="w-full flex justify-between">
                 <div class="space-x-8">
-                  <button id="a1" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A1</button>
-                  <button id="a2" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A2</button>
+                  <button id="a1" class="bus-sit font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A1</button>
+                  <button id="a2" class="bus-sit font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A2</button>
                 </div>
                 <div class="space-x-8">
-                  <button id="a3" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A3</button>
-                  <button id="a4" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A4</button>
+                  <button id="a3" class="bus-sit font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A3</button>
+                  <button id="a4" class="bus-sit font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">A4</button>
                 </div>
               </div>
             </div>
@@ -222,12 +222,12 @@
               <p class="item font-inter text-lg font-medium ">B</p>
               <div class="w-full flex justify-between">
                 <div class="space-x-8">
-                  <button id="b1" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B1</button>
-                  <button id="b2" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B2</button>
+                  <button id="b1" class="bus-sit font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B1</button>
+                  <button id="b2" class="bus-sit font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B2</button>
                 </div>
                 <div class="space-x-8">
-                  <button id="b3" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B3</button>
-                  <button id="b4" class="items font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B4</button>
+                  <button id="b3" class="bus-sit font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B3</button>
+                  <button id="b4" class="bus-sit font-inter text-lg font-medium bg-[#F7F8F8] px-10 py-3 rounded-xl">B4</button>
                 </div>
               </div>
             </div>
@@ -246,40 +246,22 @@
               <p>Price</p>
             </div>
             <div class="border-b border-dashed border-[#03071233] my-4"></div>
-            <div  class="space-y-4">
-              <div id="ticket-1" class="flex justify-between items-center font-inter font-normal text-base hidden">
-                <p id="ticket-no-1"></p>
-                <p class="ml-5">Economoy</p>
-                <p>550</p>
-              </div>
-              <div id="ticket-2" class="flex justify-between items-center font-inter font-normal text-base hidden">
-                <p id="ticket-no-2"></p>
-                <p class="ml-5">Economoy</p>
-                <p>550</p>
-              </div>
-              <div id="ticket-3" class="flex justify-between items-center font-inter font-normal text-base hidden">
-                <p id="ticket-no-3"></p>
-                <p class="ml-5">Economoy</p>
-                <p>550</p>
-              </div>
-              <div id="ticket-4" class="flex justify-between items-center font-inter font-normal text-base hidden">
-                <p id="ticket-no-4"></p>
-                <p class="ml-5">Economoy</p>
-                <p>550</p>
-              </div>
+            <div id="tickit-1">
+
+            </div>
             </div>
             <div class="border-b border-dashed border-[#03071233] my-4"></div>
             <div class="flex justify-between items-center my-4 font-inter font-medium text-base text-[#030712]">
               <p>Total Price</p>
-              <p>BDT <span>0</span></p>
+              <p>BDT <span id="bay-of-cost">0</span></p>
             </div>
             <div class="mb-6 relative">
-              <input type="text" class="text-sm font-normal font-inter p-5 rounded-xl w-full" placeholder="Have any copupon?">
+              <input id="cupon-code" type="text" class="text-sm font-normal font-inter p-5 rounded-xl w-full" placeholder="Have any copupon?">
               <button class="btn font-inter text-base font-semibold bg-[#1DD100] px-5 py-3 text-[#FFFFFF] absolute right-2 bottom-[6px]">Apply</button>
             </div>
             <div class="flex justify-between items-center font-inter font-medium text-base text-[#030712]">
               <p>Grand Total</p>
-              <p>BDT <span>0</span></p>
+              <p>BDT <span id="grand-total">0</span></p>
             </div>
             <div>
               <button class="btn font-raleway text-xl font-extrabold bg-[#1DD100] w-full h-auto py-5 mt-6 rounded-2xl text-[#FFFFFF]">Next</button>
