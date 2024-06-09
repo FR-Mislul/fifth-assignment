@@ -1,3 +1,9 @@
+// scrool drop down 
+function scrollDopDown(){
+    document.getElementById('sell-ticket').scrollIntoView('sell-ticket')
+}
+
+
 const allSit = document.getElementsByClassName('bus-sit')
 
 for (const sit of allSit){
@@ -16,13 +22,18 @@ for (const sit of allSit){
         div.append(p2);
         div.append(p3);
         selectedTicket.append(div)
+        const hr = document.createElement('div');
+        hr.classList.add('border')
+        hr.classList.add('border-dashed')
+        hr.classList.add('border-black')
+        selectedTicket.append(hr)
 
         const singleTicket = p3.innerText;
         updateTotalCost (singleTicket);
         updateGrandTotal();
     })}
 
-    const allItems = document.getElementsByClassName('items');
+    const allItems = document.getElementsByClassName('bus-sit');
 
 let sitCount = 0;
 let availableSit = 8;
@@ -34,21 +45,6 @@ for(const item of allItems){
         .innerText = sitCount;
         availableSit = availableSit - 1;
         document.getElementById('available-sit').innerText =availableSit;
-
-         const ticket1 = event.target.innerText;
-         document.getElementById('ticket-1').classList.remove('hidden')
-         document.getElementById('ticket-no-1').innerText = ticket1;
-
-         const ticket2 = event.target.innerText;
-         document.getElementById('ticket-2').classList.remove('hidden')
-         document.getElementById('ticket-no-2').innerText = ticket2;
-
-         const ticket3 = event.target.innerText;
-         document.getElementById('ticket-3').classList.remove('hidden')
-         document.getElementById('ticket-no-3').innerText = ticket3;
-         const ticket4 = event.target.innerText;
-         document.getElementById('ticket-4').classList.remove('hidden')
-         document.getElementById('ticket-no-4').innerText = ticket4;
     })
 }
 
